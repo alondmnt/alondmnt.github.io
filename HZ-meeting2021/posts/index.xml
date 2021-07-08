@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Tuller-con 2021</title>
+    <link>https://alondmnt.com/HZ-meeting2021/posts/</link>
+    <description>Recent content in Posts on Tuller-con 2021</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Jul 2021 21:06:57 +0300</lastBuildDate><atom:link href="https://alondmnt.com/HZ-meeting2021/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Posters</title>
+      <link>https://alondmnt.com/HZ-meeting2021/posts/posters/</link>
+      <pubDate>Wed, 07 Jul 2021 21:06:57 +0300</pubDate>
+      
+      <guid>https://alondmnt.com/HZ-meeting2021/posts/posters/</guid>
+      <description>Presenter Title     Alma Davidson Automatic modeling of tissue specificity of viruses   Arup Panda How environment shapes the global codon and amino acid usage pattern of microbial communities: A cross-biome metagenomic analysis   David Shallom Accelerating whole cell simulations of mRNA translation using a dedicated hardware   Hadar Ben Shoshan Modeling evolution of local genetic instability   Lee Azolai Exosomal DNA as a novel biomarker in brain cancers diagnostics   Liyam Chitayat Levi Microbiome Engineering   Mahua Bhattacharya Non-optimal codon usage determines the protein level dynamics during cell-cycle   Marina Parr Genomic determinants of viral host diversity   Michael Peeri Analysis of selection on mRNA secondary structure strength in protein-coding sequences within conserved protein families   Nataly Makarenkov Circulating Micro-RNAs As Biomarkers of Visceral Obesity-Related Adipose Tissue Disease (OrAD)   Nicolas Lynn Detecting and Understanding Meaningful Cancerous Mutations based on Computational Models of mRNA Splicing   Shai Cohen Modelling the phenotypic outcomes of CRISPR-Cas genome editing technologies   Shani Cohen Machine Learning for prediction of sRNA-mRNA interactions   Sharon Bader Computational Modeling of the effect of miRNA binding sites distribution on mRNA stability   Shimshi Atar Effect of human microbiome supplementation on metabolic disease and other conditions   Shir Bahiri Elitzur Designing DNT sensing bacteria based on computational models   Sophie Vinokour Determinants of Efficient Modulating of Ribosomal Traffic Jams   Stav Carmel Ezra Modeling the effect of rRNA-mRNA interactions and mRNA folding on mRNA translation in organelles   Stav Lutzky &amp;amp; Isana Veksler-Lublinsky Functional interplay between microRNAs, RNA binding proteins, and alternative polyadenylation in gene regulation in C.</description>
+    </item>
+    
+    <item>
+      <title>Agenda</title>
+      <link>https://alondmnt.com/HZ-meeting2021/posts/agenda/</link>
+      <pubDate>Mon, 05 Jul 2021 09:00:00 +0300</pubDate>
+      
+      <guid>https://alondmnt.com/HZ-meeting2021/posts/agenda/</guid>
+      <description>   Time Presenter Title     9:00 – 9:15 Tamir Tuller Welcome &amp;amp; introduction   9:15 – 10:00 Dmitrij Frishman First Keynote   10:00 – 10:20 Shir Bahiri Short presentation   10:20 – 10:30  Coffee break   10:30 – 10:50 Rachel Kolodny Short presentation   10:50 – 11:20  Poster highlight   11:20 – 12:10  First poster session + break   12:10 – 12:40  Lunch break   12:40 – 13:25 Amnon Horovitz Second Keynote   13:25 – 13:55  Poster highlight   13:55 – 14:25  Second poster session + break   14:25 – 15:25 Nataly Makarenkov Short presentation   14:25 – 15:25 Zohar Zafrir Short presentation   15:05 – 15:25 Sumit Mukherjee Short presentation   15:25 – 16:00  Summary + Tuller Lab get together    </description>
+    </item>
+    
+  </channel>
+</rss>
