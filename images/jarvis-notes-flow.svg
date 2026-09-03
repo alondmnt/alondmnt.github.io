@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 566" width="760" height="566" font-family="'Open Sans',Helvetica,Arial,sans-serif" role="img" aria-label="Flow of a question through Jarvis when chatting with your notes">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#1f2d2a"/>
+    </marker>
+    <style>
+      .b { fill:#fff; stroke:#1f2d2a; stroke-opacity:.35; stroke-width:1.2; rx:5 }
+      .m { fill:#7ad6b9; stroke:#0f7a63; stroke-opacity:.45; stroke-width:1.2; rx:5 }
+      .t { fill:#1f2d2a; font-size:15px; font-weight:600 }
+      .s { fill:#4a5a56; font-size:12.5px }
+      .l { stroke:#1f2d2a; stroke-opacity:.5; stroke-width:1.3; fill:none; marker-end:url(#a) }
+      .n { fill:#4a5a56; font-size:12px; font-style:italic }
+    </style>
+  </defs>
+
+  <rect class="b" x="280" y="8" width="200" height="38"/>
+  <text class="t" x="380" y="32" text-anchor="middle">Your question</text>
+  <path class="l" d="M380,46 L380,76"/>
+
+  <rect class="b" x="190" y="78" width="380" height="56"/>
+  <text class="t" x="380" y="101" text-anchor="middle">One to three sub-queries</text>
+  <text class="s" x="380" y="121" text-anchor="middle">written by the chat model, each with its own keyword terms</text>
+
+  <path class="l" d="M300,134 L300,152 Q300,162 288,162 L170,162 Q158,162 158,172 L158,190"/>
+  <path class="l" d="M460,134 L460,152 Q460,162 472,162 L590,162 Q602,162 602,172 L602,190"/>
+
+  <rect class="b" x="28" y="192" width="260" height="72"/>
+  <text class="t" x="158" y="216" text-anchor="middle">Vector search</text>
+  <text class="s" x="158" y="236" text-anchor="middle">each sub-query embedded; a block</text>
+  <text class="s" x="158" y="252" text-anchor="middle">scores as its best single match</text>
+
+  <rect class="b" x="472" y="192" width="260" height="72"/>
+  <text class="t" x="602" y="216" text-anchor="middle">Keyword search</text>
+  <text class="s" x="602" y="243" text-anchor="middle">using Joplin's own search index</text>
+
+  <path class="l" d="M158,264 L158,296 Q158,306 170,306 L288,306 Q300,306 300,316 L300,334"/>
+  <path class="l" d="M602,264 L602,296 Q602,306 590,306 L472,306 Q460,306 460,316 L460,334"/>
+
+  <rect class="m" x="230" y="336" width="300" height="38"/>
+  <text class="t" x="380" y="360" text-anchor="middle">Reciprocal rank fusion</text>
+  <text class="n" x="546" y="360">ranks only, no shared scale</text>
+  <path class="l" d="M380,374 L380,404"/>
+
+  <rect class="b" x="230" y="406" width="300" height="38"/>
+  <text class="t" x="380" y="430" text-anchor="middle">Keyword reranking</text>
+  <path class="l" d="M380,444 L380,474"/>
+
+  <rect class="b" x="230" y="476" width="300" height="38"/>
+  <text class="t" x="380" y="500" text-anchor="middle">Neighbouring blocks</text>
+  <text class="n" x="546" y="500">optional</text>
+  <path class="l" d="M380,514 L380,540"/>
+
+  <text class="t" x="380" y="556" text-anchor="middle">Answer, over the notes it used</text>
+</svg>

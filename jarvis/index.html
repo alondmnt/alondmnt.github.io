@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+
+<title>Jarvis</title>
+
+
+
+
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+
+
+  <meta name="description" content="machine learning & AI for health"
+/>
+
+  <meta name="keywords" content="machine learning, AI for health, data science, computational biology, bioinformatics, personal knowledge management"
+/>
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.min.99820a2df9ca08ed06ac8835c28852f51d7dbb8a129ef47f8cb2d4bf03f4ff2a.css" type="text/css" integrity="sha256-mYIKLfnKCO0GrIg1wohS9R19u4oSnvR/jLLUvwP0/yo=" />
+
+<meta property="og:url" content="https://alondmnt.com/jarvis/">
+	<meta property="og:site_name" content="Alon Diament Carmel">
+	<meta property="og:title" content="Jarvis">
+	<meta property="og:description" content="Back in 2022 I wanted to have LLMs as first-class citizens in my favourite note app. It was clear that they could make the editing, brainstorming and searching experience immensely better if they were integrated within my personal knowledge base. So I built Jarvis, and expanded it over the following months until it became a powerful assistant that can answer deep questions about my personal and professional life.
+The first release went out on 20 November 2022, ten days before ChatGPT, and it was basic. Retrieval over notes came the following spring, and there have been releases every year since. It is the de facto standard AI assistant for Joplin.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="og:image" content="https://alondmnt.com/images/cover-image.jpg">
+
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://alondmnt.com/images/cover-image.jpg">
+	<meta name="twitter:title" content="Jarvis">
+	<meta name="twitter:description" content="Back in 2022 I wanted to have LLMs as first-class citizens in my favourite note app. It was clear that they could make the editing, brainstorming and searching experience immensely better if they were integrated within my personal knowledge base. So I built Jarvis, and expanded it over the following months until it became a powerful assistant that can answer deep questions about my personal and professional life.
+The first release went out on 20 November 2022, ten days before ChatGPT, and it was basic. Retrieval over notes came the following spring, and there have been releases every year since. It is the de facto standard AI assistant for Joplin.">
+
+
+	<meta itemprop="name" content="Jarvis">
+	<meta itemprop="description" content="Back in 2022 I wanted to have LLMs as first-class citizens in my favourite note app. It was clear that they could make the editing, brainstorming and searching experience immensely better if they were integrated within my personal knowledge base. So I built Jarvis, and expanded it over the following months until it became a powerful assistant that can answer deep questions about my personal and professional life.
+The first release went out on 20 November 2022, ten days before ChatGPT, and it was basic. Retrieval over notes came the following spring, and there have been releases every year since. It is the de facto standard AI assistant for Joplin.">
+	<meta itemprop="wordCount" content="639">
+	<meta itemprop="image" content="https://alondmnt.com/images/cover-image.jpg">
+
+
+<link rel="stylesheet" href='/css/custom.css' />
+</head>
+  <body>
+  <main class="content page-template page-">
+    <article class="post page">
+      <header class="post-header">
+        
+          
+        <a id="back-to-main-page" href="/"><i class="fa fa-chevron-left" aria-hidden="true"></i> Alon Diament Carmel</a>
+          
+        
+      </header>
+      <h1 class="post-title">Jarvis</h1>
+      <section class="post-content">
+        <p>Back in 2022 I wanted to have LLMs as first-class citizens in my favourite note app. It was clear that they could make the editing, brainstorming and searching experience immensely better if they were integrated within my personal knowledge base. So I built Jarvis, and expanded it over the following months until it became a powerful assistant that can answer deep questions about my personal and professional life.</p>
+<p>The first release went out on 20 November 2022, ten days before ChatGPT, and it was basic. Retrieval over notes came the following spring, and there have been <a href="https://github.com/alondmnt/joplin-plugin-jarvis/releases">releases</a> every year since. It is the de facto standard AI assistant for Joplin.</p>
+<figure><img src="/images/jarvis-chat-panel.jpg"
+			alt="Answering from my own notes, scoped here to the whole collection. The numbers are links into the notes it used." width="62%"><figcaption>
+			<p>Answering from my own notes, scoped here to the whole collection. The numbers are links into the notes it used.</p>
+		</figcaption>
+</figure>
+
+<h4 id="watch-it">Watch it</h4>
+<p>The Joplin team made their own tutorial video for Jarvis.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/cxhKkbigNmk?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+		</div>
+
+<h4 id="how-it-finds-things">How it finds things</h4>
+<p>Chatting with your notes runs the question through this:</p>
+<figure><img src="/images/jarvis-notes-flow.svg" width="100%">
+</figure>
+
+<p>A block scores as its best match against any one sub-query, not an average, so a block that answers part of a question well is not diluted by the rest. The two rankings merge by position rather than by score, so a keyword hit and a vector hit can be compared without inventing a shared scale.</p>
+<h4 id="reviewing-the-literature">Reviewing the literature</h4>
+<p>The other thing I wanted early on was a literature review I could trust. ChatGPT in early 2023 would name real authors working on the right subject and then invent their papers.</p>
+<p>So the command never asks a model for a review. It asks for research questions and search queries, runs those against Semantic Scholar, Crossref, Scopus and Springer, and Wikipedia alongside them, has the model judge each result for relevance, and only then writes the review from the papers it actually found, citing them. I <a href="https://medium.com/@alondmnt/ai-powered-literature-review-6918ee180304">wrote the pipeline up</a> at the time.</p>
+<p>That shape is a product category now, and the hosted versions of it are better than mine. In April 2023 it was not obvious.</p>
+<h4 id="a-database-that-syncs">A database that syncs</h4>
+<p>Joplin has a synced and secure note database, which can also be easily backed up. I wanted to leverage that by storing the vector database inside note metadata and syncing it across devices. This way, low-powered devices do not have to embed the entire notes corpus, and if you are paying an API for embeddings you pay once rather than once per device.</p>
+<p>Jarvis runs on anything that exposes an OpenAI-compatible API, from Ollama, LM Studio or Jan on your own machine to OpenAI, Anthropic and Google, and it ships with a built-in embedding model. Several can coexist, each keeping its own vectors, so indexing on a phone with a small model does not disturb a laptop using a larger one. And when settings drift between devices, Jarvis reports how many notes are affected instead of quietly mixing two indexes.</p>
+<p>To keep that metadata small, the vectors are quantised to 8 bits per value, a quarter of the size of float32 and in agreement with it to about 99%.</p>
+<p>Doing this did expose one problem. Joplin stored a full copy of the metadata in every note revision, so editing a single word duplicated all of that note&rsquo;s vectors into its history. I <a href="https://github.com/laurent22/joplin/pull/15245">fixed that in Joplin itself</a>. Debugging Jarvis also turned up a memory leak in Joplin&rsquo;s plugin API that had been affecting plugins for years. I traced it to <a href="https://github.com/laurent22/joplin/issues/14919">the callback registry</a>, and a maintainer shipped the fix two days later.</p>
+<h4 id="where-it-goes-next">Where it goes next</h4>
+<p>A shared, native, cross-plugin embedding index, built once and built well, would let every feature on top of it improve at once, rather than each one solving retrieval again for itself. I set that case out when Joplin was <a href="https://discourse.joplinapp.org/t/gsoc-2026-opportunities-for-the-ai-projects/49228">scoping its AI projects</a>.</p>
+<h4 id="read-more">Read more</h4>
+<p>The <a href="https://github.com/alondmnt/joplin-plugin-jarvis">code</a> and the <a href="https://github.com/alondmnt/joplin-plugin-jarvis/blob/master/GUIDE.md">guide</a>, and a <a href="https://github.com/alondmnt/joplin-plugin-jarvis/blob/master/docs/VECTOR_DB_TECH_SPEC.md">technical spec</a> for the note-metadata index.</p>
+
+      </section>
+    </article>
+  </main>
+
+
+
+
+<footer class="site-footer">
+  <div class="inner">
+    
+
+    
+
+    
+      <section class="copyright">© Alon Diament Carmel</section>
+    
+
+    
+      <section>
+        <a href="https://themes.gohugo.io/hugo-scroll/" target="_blank" rel="noopener">Hugo Scroll</a> template
+      </section>
+    
+
+    
+  </div>
+</footer>
+
+
+    
+
+    
+    
+    
+    
+
+    <script src="/js/script.min.e160528b633462bdeb2be407a18efdca8e33f3d7213b874346848ede0348993f.js" integrity="sha256-4WBSi2M0Yr3rK&#43;QHoY79yo4z89chO4dDRoSO3gNImT8=" ></script>
+
+    
+    <script>cssVars();</script>
+
+    
+</body>
+</html>

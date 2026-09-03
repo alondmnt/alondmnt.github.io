@@ -1,0 +1,203 @@
+/* ==========================================================================
+   alondmnt.com - site overrides on top of hugo-scroll
+   Everything here is a deliberate deviation from the theme defaults.
+   ========================================================================== */
+
+:root {
+  /* --- palette ------------------------------------------------------------
+     The mint is the site's 2020 colour, kept exactly. What changed is the
+     text on it: white on this mint is 1.73:1 contrast, which fails WCAG AA
+     (4.5:1) badly. Dark ink on the same mint is 8.3:1.
+     ---------------------------------------------------------------------- */
+  --mint: #7ad6b9;
+  --ink: #1f2d2a;
+  --ink-soft: #4a5a56;
+  --cream: #f2efe8;
+  --accent: #0f7a63;
+  --accent-deep: #08533f;
+
+  /* Alternating content sections */
+  --section-light-bg-color: var(--cream);
+  --section-light-text-color: #3a4145;
+  --section-dark-bg-color: var(--mint);
+  --section-dark-text-color: var(--ink);
+
+  --section-uni-quote: var(--ink-soft);
+  --section-uni-code-bg-color: #e4e1d9;
+
+  /* Cover / landing area. The succulent photo is bright and busy in the
+     centre, so the headline gets a translucent guard (title_guard = true
+     in config.toml) instead of the old purple glow. */
+  --cover-text-color: var(--ink);
+  --cover-title-and-description-guard-bg-color: rgba(255, 255, 255, 0.78);
+  --cover-title-text-shadow: none;
+
+  /* Cover menu buttons */
+  --highlight: rgba(255, 255, 255, 0.8);
+  --highlight-contrast: var(--ink);
+  --highlight-inverse: var(--mint);
+  --highlight-inverse-contrast: var(--ink);
+
+  /* Sticky side navigation */
+  --sticky-menu-text-color: var(--accent);
+
+  /* Single (detail) pages */
+  --single-page-bg-color: var(--cream);
+  --single-page-text-color: #3a4145;
+
+  --footer-color-background: #22343a;
+  --footer-color: #bbc7cc;
+
+  /* Bullet glyph for unordered lists */
+  --ul-li-icon: fa-angle-right;
+}
+
+/* --- cover ---------------------------------------------------------------- */
+
+/* Frosted card, so it reads as deliberate where it overlaps the foliage
+   rather than as a pale rectangle. */
+.title-and-description-guard {
+  border-radius: 8px;
+  padding: 0.7em 1.4em;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.blog-title {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.blog-description {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+/* Cover menu buttons: outlined rather than filled blocks */
+a.btn.site-menu {
+  border: 1px solid rgba(31, 45, 42, 0.25);
+  border-radius: 4px;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  padding: 9px 16px;
+}
+
+a.btn.site-menu:hover {
+  border-color: var(--accent);
+}
+
+/* --- links ---------------------------------------------------------------- */
+
+.post-content a {
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.post-holder:not(.dark) .post-content a {
+  color: var(--accent);
+}
+
+.post-holder:not(.dark) .post-content a:hover {
+  color: var(--accent-deep);
+}
+
+/* On the mint ground, links stay ink and lean on the underline */
+.post-holder.dark .post-content a {
+  color: var(--ink);
+  text-decoration-color: rgba(31, 45, 42, 0.45);
+}
+
+.post-holder.dark .post-content a:hover {
+  color: var(--accent-deep);
+  text-decoration-color: var(--accent-deep);
+}
+
+/* --- headings ------------------------------------------------------------- */
+
+.post-title {
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+/* The Personal / Work / Research labels inside Software */
+.post-content h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+  margin-top: 3.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.post-holder.dark .post-content h4 {
+  color: #0b4a3b;
+}
+
+/* --- contact list --------------------------------------------------------- */
+
+/* One row of labelled links, rather than one icon per line */
+#contact .post-content p:has(> i.fa),
+#contact .post-content p:has(> i.fa-brands) {
+  display: inline-block;
+  margin: 0.4em 1.6em 0.4em 0;
+}
+
+#contact .post-content i {
+  width: 1.3em;
+  text-align: center;
+  color: var(--accent);
+}
+
+/* --- body text ------------------------------------------------------------ */
+
+/* The theme justifies body copy, which hyphenates awkwardly in a 700px
+   measure ("seman-tic", "man-agement"). Ragged right reads better here. */
+.post-content,
+.post-content p,
+.post-content li {
+  text-align: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
+
+/* --- images --------------------------------------------------------------- */
+
+.post-content img {
+  border-radius: 4px;
+}
+
+/* --- figure captions ------------------------------------------------------ */
+
+/* Hugo's figure shortcode puts `title` in an h4, which would otherwise pick up
+   the uppercase section-label styling above. Captions are small muted prose. */
+.post-content figcaption h4,
+.post-content figcaption p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0.8rem auto 0;
+  max-width: 90%;
+  opacity: 0.75;
+}
+
+.post-content figcaption {
+  text-align: center;
+}
+
+/* --- internal links ------------------------------------------------------- */
+
+/* The body carries far more external links than internal ones, and every
+   project name links to its repo, so a link on a project name reads as
+   "leaving the site". A trailing arrow marks the ones that stay.
+   Only when the link is a paragraph on its own: mid-sentence the arrow breaks
+   the clause, as in "I led the metabolic health agent -> project". */
+.post-content p > a[href^="/"]:only-child::after,
+.post-content p > a[href^="#"]:only-child::after {
+  content: "\00a0\2192";
+  font-size: 0.85em;
+  text-decoration: none;
+  opacity: 0.65;
+}
