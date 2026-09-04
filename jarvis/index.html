@@ -57,7 +57,7 @@ The first release went out on 20 November 2022, ten days before ChatGPT, and it 
 	<meta itemprop="name" content="Jarvis">
 	<meta itemprop="description" content="Back in 2022 I wanted to have LLMs as first-class citizens in my favourite note app. It was clear that they could make the editing, brainstorming and searching experience immensely better if they were integrated within my personal knowledge base. So I built Jarvis, and expanded it over the following months until it became a powerful assistant that can answer deep questions about my personal and professional life.
 The first release went out on 20 November 2022, ten days before ChatGPT, and it was basic. Retrieval over notes came the following spring, and there have been releases every year since. It is the de facto standard AI assistant for Joplin.">
-	<meta itemprop="wordCount" content="639">
+	<meta itemprop="wordCount" content="704">
 	<meta itemprop="image" content="https://alondmnt.com/images/cover-image.jpg">
 
 
@@ -106,6 +106,7 @@ The first release went out on 20 November 2022, ten days before ChatGPT, and it 
 <p>Doing this did expose one problem. Joplin stored a full copy of the metadata in every note revision, so editing a single word duplicated all of that note&rsquo;s vectors into its history. I <a href="https://github.com/laurent22/joplin/pull/15245">fixed that in Joplin itself</a>. Debugging Jarvis also turned up a memory leak in Joplin&rsquo;s plugin API that had been affecting plugins for years. I traced it to <a href="https://github.com/laurent22/joplin/issues/14919">the callback registry</a>, and a maintainer shipped the fix two days later.</p>
 <h4 id="where-it-goes-next">Where it goes next</h4>
 <p>A shared, native, cross-plugin embedding index, built once and built well, would let every feature on top of it improve at once, rather than each one solving retrieval again for itself. I set that case out when Joplin was <a href="https://discourse.joplinapp.org/t/gsoc-2026-opportunities-for-the-ai-projects/49228">scoping its AI projects</a>.</p>
+<p>The other direction is agents. In 2025 I <a href="https://discourse.joplinapp.org/t/ai-agents-and-joplin/46168">wanted mine to reach into the same second brain</a>, so I built <a href="https://github.com/alondmnt/joplin-mcp">joplin-mcp</a>, an MCP server that lets any agent read and write Joplin notes through a standard interface. It has become the most widely used MCP for Joplin, and the project is now building one into the core app as part of its new AI infrastructure.</p>
 <h4 id="read-more">Read more</h4>
 <p>The <a href="https://github.com/alondmnt/joplin-plugin-jarvis">code</a> and the <a href="https://github.com/alondmnt/joplin-plugin-jarvis/blob/master/GUIDE.md">guide</a>, and a <a href="https://github.com/alondmnt/joplin-plugin-jarvis/blob/master/docs/VECTOR_DB_TECH_SPEC.md">technical spec</a> for the note-metadata index.</p>
 
