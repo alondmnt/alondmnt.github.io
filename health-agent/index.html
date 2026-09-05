@@ -54,7 +54,7 @@
 
 	<meta itemprop="name" content="The metabolic health agent">
 	<meta itemprop="description" content="Ask a leading foundation model to write a health report from someone’s continuous glucose data and meal log, and you get something fluent, confident and partly invented. On identical two weeks of CGM and meal data, the frontier models we compared, among them GPT-5.4, Claude Opus 4.6 and Gemini 3.1 Pro, invented glycaemic variability values, counted 172 meals where the log held 70, and projected complication risks that referenced nothing. None of it looks wrong. That is the problem: spotting the errors means going back to the source data and recomputing, and neither the person nor their clinician is in a position to do that.">
-	<meta itemprop="wordCount" content="785">
+	<meta itemprop="wordCount" content="801">
 	<meta itemprop="image" content="https://alondmnt.com/images/cover-image.jpg">
 
 
@@ -73,7 +73,7 @@
       <h1 class="post-title">The metabolic health agent</h1>
       <section class="post-content">
         <p>Ask a leading foundation model to write a health report from someone&rsquo;s continuous glucose data and meal log, and you get something fluent, confident and partly invented. On identical two weeks of CGM and meal data, the frontier models we compared, among them GPT-5.4, Claude Opus 4.6 and Gemini 3.1 Pro, invented glycaemic variability values, counted 172 meals where the log held 70, and projected complication risks that referenced nothing. None of it looks wrong. That is the problem: spotting the errors means going back to the source data and recomputing, and neither the person nor their clinician is in a position to do that.</p>
-<p>I led the project to fix this, a five-person effort across teams at Pheno AI, from architecture through to evaluation.</p>
+<p>I led the project to fix this, a five-person effort across teams at Pheno AI, from architecture through to evaluation. We built it in late 2025, and re-ran the evaluation against newer frontier models before publishing.</p>
 <h4 id="what-we-built">What we built</h4>
 <p>The architecture is deliberately plain: one ReAct orchestrator over 21 tools and trained-model wrappers, in six groups.</p>
 <ul>

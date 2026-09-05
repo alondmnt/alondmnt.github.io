@@ -214,6 +214,15 @@ a.btn.site-menu:hover {
    at natural size, and several are narrow (misc-technicalities is 293px), so
    a blanket rule would upscale and blur them. */
 @media only screen and (max-width: 768px) {
+  /* <figure> carries the UA default margin: 1em 40px, so 80px of a narrow
+     column goes to margins before the image gets any. On a 390px phone that
+     is a quarter of the width. Plain markdown images are not wrapped in a
+     figure, which is why only the shortcode ones need this. */
+  .post-content figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .post-content img[width] {
     width: 100%;
   }
