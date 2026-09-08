@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+
+<title>PhenoBench</title>
+
+
+
+
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+
+
+  <meta name="description" content="machine learning & AI for health"
+/>
+
+  <meta name="keywords" content="machine learning, AI for health, data science, computational biology, bioinformatics, personal knowledge management"
+/>
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.min.99820a2df9ca08ed06ac8835c28852f51d7dbb8a129ef47f8cb2d4bf03f4ff2a.css" type="text/css" integrity="sha256-mYIKLfnKCO0GrIg1wohS9R19u4oSnvR/jLLUvwP0/yo=" />
+
+<meta property="og:url" content="https://alondmnt.com/phenobench/">
+	<meta property="og:site_name" content="Alon Diament Carmel">
+	<meta property="og:title" content="PhenoBench">
+	<meta property="og:description" content="A lot of analyses have been run on the Human Phenotype Project, and very few of them can be set beside one another. Each picks its own population, its own split and its own baseline, so a result that looks stronger than another may only be answering an easier question. The cohort keeps producing evidence that does not accumulate.
+What it is PhenoBench turns the Human Phenotype Project into a common test bed for any model, from classical baselines to large language models. It came out of my team’s evaluation workstream, and it is public so that other groups can put their own models through it. Gal Sapir led the project and first-authored the paper; I set its direction and worked hands-on inside it.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="og:image" content="https://alondmnt.com/images/cover-image.jpg">
+
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://alondmnt.com/images/cover-image.jpg">
+	<meta name="twitter:title" content="PhenoBench">
+	<meta name="twitter:description" content="A lot of analyses have been run on the Human Phenotype Project, and very few of them can be set beside one another. Each picks its own population, its own split and its own baseline, so a result that looks stronger than another may only be answering an easier question. The cohort keeps producing evidence that does not accumulate.
+What it is PhenoBench turns the Human Phenotype Project into a common test bed for any model, from classical baselines to large language models. It came out of my team’s evaluation workstream, and it is public so that other groups can put their own models through it. Gal Sapir led the project and first-authored the paper; I set its direction and worked hands-on inside it.">
+
+
+	<meta itemprop="name" content="PhenoBench">
+	<meta itemprop="description" content="A lot of analyses have been run on the Human Phenotype Project, and very few of them can be set beside one another. Each picks its own population, its own split and its own baseline, so a result that looks stronger than another may only be answering an easier question. The cohort keeps producing evidence that does not accumulate.
+What it is PhenoBench turns the Human Phenotype Project into a common test bed for any model, from classical baselines to large language models. It came out of my team’s evaluation workstream, and it is public so that other groups can put their own models through it. Gal Sapir led the project and first-authored the paper; I set its direction and worked hands-on inside it.">
+	<meta itemprop="wordCount" content="499">
+	<meta itemprop="image" content="https://alondmnt.com/images/cover-image.jpg">
+
+
+<link rel="stylesheet" href='/css/custom.css' />
+</head>
+  <body>
+  <main class="content page-template page-">
+    <article class="post page">
+      <header class="post-header">
+        
+          
+        <a id="back-to-main-page" href="/"><i class="fa fa-chevron-left" aria-hidden="true"></i> Alon Diament Carmel</a>
+          
+        
+      </header>
+      <h1 class="post-title">PhenoBench</h1>
+      <section class="post-content">
+        <p>A lot of analyses have been run on the Human Phenotype Project, and very few of them can be set beside one another. Each picks its own population, its own split and its own baseline, so a result that looks stronger than another may only be answering an easier question. The cohort keeps producing evidence that does not accumulate.</p>
+<h4 id="what-it-is">What it is</h4>
+<p>PhenoBench turns the Human Phenotype Project into a common test bed for any model, from classical baselines to large language models. It came out of my team&rsquo;s evaluation workstream, and it is public so that other groups can put their own models through it. <a href="https://galsapir.com">Gal Sapir</a> led the project and first-authored the paper; I set its direction and worked hands-on inside it.</p>
+<p>Each question fixes its target, eligible population, timing and allowed information, and its evaluation contract fixes the split, the metric, the baseline and the claim boundary. 90 tasks across 15 clinical domains and 26 input modalities, over horizons from seconds to six years. Once those are fixed, a new model can be evaluated without redefining the question, and results from different groups and different years can be read against each other.</p>
+<h4 id="what-it-showed">What it showed</h4>
+<p>We ran three pretrained tabular foundation models against ridge regression, gradient-boosted trees and a tuned neural baseline, over 160 matched comparisons spanning 52 tasks.</p>
+<p>The pretrained models ranked highest overall. In 121 of 160 cells they came out ahead of the average of ridge and the neural baseline, and their improvement over ridge had a median of only 0.004 R2, with a 95% confidence interval of 0.002 to 0.006.</p>
+<p>Reliable, and negligible. Both halves are the finding, and either one on its own misreports it.</p>
+<p>Frozen zero-shot Chronos-2 embeddings underperformed features engineered from the same signal, in 25 of 31 glucose comparisons and 30 of 32 sleep comparisons. The caveat travels with that result: both routes were read by the same linear ridge head, so it mixes representation quality with the sample efficiency of fitting ridge to embeddings of 770 to 3,076 dimensions. It does not test whether a tabular foundation model could use those embeddings differently.</p>
+<h4 id="what-the-contracts-catch">What the contracts catch</h4>
+<p>Every language model we tested predicted retinal artery width on a micrometre-like scale. The target is in AutoMorph pixels, and the answers stayed off-scale even after the Task Card&rsquo;s reference values were supplied, under both versions of the card.</p>
+<p>An aggregate score hides a failure like that. It is visible here because each question states what is being predicted, in which units, and against which baseline.</p>
+<h4 id="where-it-goes-next">Where it goes next</h4>
+<p>Wider language-model coverage: the current run reaches 40 of the 90 tasks. And agentic auto-research loops over the same tasks. An agent that proposes and runs its own analysis needs somewhere to be checked against a fixed question, held-out data and a declared comparator, which is what an evaluation contract already is.</p>
+<h4 id="read-it">Read it</h4>
+<p>The <a href="https://galsapir.github.io/phenobench-benchmark/site/generated/">public benchmark</a> has the task catalog, the Task Cards, per-track results and a submission path.</p>
+
+      </section>
+    </article>
+  </main>
+
+
+
+
+<footer class="site-footer">
+  <div class="inner">
+    
+
+    
+
+    
+      <section class="copyright">© Alon Diament Carmel</section>
+    
+
+    
+      <section>
+        <a href="https://themes.gohugo.io/hugo-scroll/" target="_blank" rel="noopener">Hugo Scroll</a> template
+      </section>
+    
+
+    
+  </div>
+</footer>
+
+
+    
+
+    
+    
+    
+    
+
+    <script src="/js/script.min.e160528b633462bdeb2be407a18efdca8e33f3d7213b874346848ede0348993f.js" integrity="sha256-4WBSi2M0Yr3rK&#43;QHoY79yo4z89chO4dDRoSO3gNImT8=" ></script>
+
+    
+    <script>cssVars();</script>
+
+    
+</body>
+</html>
