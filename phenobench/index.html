@@ -44,11 +44,11 @@
 What it is PhenoBench turns the Human Phenotype Project into a common test bed for any model, from classical baselines to large language models. It came out of my team’s evaluation workstream, and it is public so that other groups can put their own models through it. Gal Sapir led the project and first-authored the paper; I set its direction and worked hands-on inside it.">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
-		<meta property="og:image" content="https://alondmnt.com/images/cover-image.jpg">
+		<meta property="og:image" content="https://alondmnt.com/og/phenobench.jpg">
 
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://alondmnt.com/images/cover-image.jpg">
+	<meta name="twitter:image" content="https://alondmnt.com/og/phenobench.jpg">
 	<meta name="twitter:title" content="PhenoBench">
 	<meta name="twitter:description" content="A lot of analyses have been run on the Human Phenotype Project, and very few of them can be set beside one another. Each picks its own population, its own training and test participants, and its own baseline, so a result that looks stronger than another may only be answering an easier question. The cohort kept producing evidence that did not accumulate.
 What it is PhenoBench turns the Human Phenotype Project into a common test bed for any model, from classical baselines to large language models. It came out of my team’s evaluation workstream, and it is public so that other groups can put their own models through it. Gal Sapir led the project and first-authored the paper; I set its direction and worked hands-on inside it.">
@@ -57,8 +57,8 @@ What it is PhenoBench turns the Human Phenotype Project into a common test bed f
 	<meta itemprop="name" content="PhenoBench">
 	<meta itemprop="description" content="A lot of analyses have been run on the Human Phenotype Project, and very few of them can be set beside one another. Each picks its own population, its own training and test participants, and its own baseline, so a result that looks stronger than another may only be answering an easier question. The cohort kept producing evidence that did not accumulate.
 What it is PhenoBench turns the Human Phenotype Project into a common test bed for any model, from classical baselines to large language models. It came out of my team’s evaluation workstream, and it is public so that other groups can put their own models through it. Gal Sapir led the project and first-authored the paper; I set its direction and worked hands-on inside it.">
-	<meta itemprop="wordCount" content="711">
-	<meta itemprop="image" content="https://alondmnt.com/images/cover-image.jpg">
+	<meta itemprop="wordCount" content="730">
+	<meta itemprop="image" content="https://alondmnt.com/og/phenobench.jpg">
 
 
 <link rel="stylesheet" href='/css/custom.css' />
@@ -83,6 +83,12 @@ What it is PhenoBench turns the Human Phenotype Project into a common test bed f
 <h4 id="what-it-showed">What it showed</h4>
 <p>We ran three pretrained tabular foundation models against ridge regression, gradient-boosted trees and a tuned neural baseline, over 160 matched comparisons spanning 52 tasks.</p>
 <p>The pretrained models ranked highest overall. In 121 of 160 cells they came out ahead of the average of ridge and the neural baseline, and their improvement over ridge had a median of only 0.004 R2, with a 95% confidence interval of 0.002 to 0.006.</p>
+<figure><img src="/images/phenobench-tabular.jpg"
+			alt="Mean rank within each of 160 matched comparison cells, best at the top, and the median gain over ridge." width="85%"><figcaption>
+			<p>Mean rank within each of 160 matched comparison cells, best at the top, and the median gain over ridge.</p>
+		</figcaption>
+</figure>
+
 <p>Frozen zero-shot Chronos-2 embeddings underperformed features engineered from the same signal, in 25 of 31 glucose comparisons and 30 of 32 sleep comparisons. The caveat travels with that result: both routes were read by the same linear ridge head, so it mixes representation quality with the sample efficiency of fitting ridge to embeddings of 770 to 3,076 dimensions. It does not test whether a tabular foundation model could use those embeddings differently.</p>
 <h4 id="what-the-contracts-catch">What the contracts catch</h4>
 <p>Every language model we tested predicted retinal artery width on a micrometre-like scale. The target is in AutoMorph pixels, and the answers stayed off-scale even after the Task Card&rsquo;s reference values were supplied, under both versions of the card.</p>
