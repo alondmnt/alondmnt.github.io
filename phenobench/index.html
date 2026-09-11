@@ -57,7 +57,7 @@ What it is PhenoBench turns the Human Phenotype Project into a common test bed f
 	<meta itemprop="name" content="PhenoBench">
 	<meta itemprop="description" content="A lot of analyses have been run on the Human Phenotype Project, and very few of them can be set beside one another. Each picks its own population, its own training and test participants, and its own baseline, so a result that looks stronger than another may only be answering an easier question. The cohort kept producing evidence that did not accumulate.
 What it is PhenoBench turns the Human Phenotype Project into a common test bed for any model, from classical baselines to large language models. It came out of my team’s evaluation workstream, and it is public so that other groups can put their own models through it. Gal Sapir led the project and first-authored the paper; I set its direction and worked hands-on inside it.">
-	<meta itemprop="wordCount" content="834">
+	<meta itemprop="wordCount" content="853">
 	<meta itemprop="image" content="https://alondmnt.com/og/phenobench.jpg">
 
 
@@ -103,7 +103,7 @@ What it is PhenoBench turns the Human Phenotype Project into a common test bed f
 <p>It shows up because each question states what is being predicted, in which units, and against which baseline.</p>
 <h4 id="where-the-claim-weakens">Where the claim weakens</h4>
 <p>A matched comparison assumes every model was held out from the same participants, and not every model is. Some predate that shared split. Some were trained by collaborators who used their own.</p>
-<p>The evaluation strategy still holds in those cases: the same question, the same metric, the same baseline. What changes is how far the result can be read, from held-out evidence to a description of what a measurement route can do, and the paper reports them that way.</p>
+<p>Every result carries the split it was scored on, so you can tell which models did not use it. The evaluation strategy still holds in those cases: the same question, the same metric, the same baseline. What changes is how far the result can be read, from held-out evidence to a description of what a measurement route can do, and the paper reports them that way.</p>
 <h4 id="where-it-goes-next">Where it goes next</h4>
 <p>So far the language-model work reuses tasks written for fitted models, under a single prompt and evidence contract, and covers 40 of the 90 tasks. The next step is tasks and evaluation strategies designed for language models rather than adapted to them.</p>
 <p>The <a href="/health-agent">metabolic health agent</a> predates PhenoBench. That project built its own evaluation harness, because there was no shared place to define what an agent should be measured on. Those questions would be PhenoBench tasks now.</p>
